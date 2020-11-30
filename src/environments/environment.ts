@@ -2,8 +2,15 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { version } from '../../package.json';
+
+// eslint-disable-next-line import/prefer-default-export
 export const environment = {
-  production: false
+  production: false,
+  version: `${version}-dev`,
+  serverUrl: '/api',
+  defaultLanguage: 'en-US',
+  supportedLanguages: ['en-US', 'fr-FR'],
 };
 
 /*
