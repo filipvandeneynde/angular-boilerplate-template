@@ -9,6 +9,8 @@
     "test": "ng test",
     "test:ci": "npm run env -s && npm run lint -s && ng test --configuration=ci",
     "lint": "ng lint",
+    "lint2": "eslint --color \"src/**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
     "e2e": "ng e2e",
     "translations:extract": "ngx-translate-extract --input ./src --output ./src/translations/template.json --format=json --clean --sort",
     "docs": "hads ./docs -o",
@@ -17,16 +19,6 @@
     "postinstall": "npm run prettier -s",
     "generate": "ng generate",
     "eslint:fix": "eslint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --relative"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "eslint --fix"
-    ]
   },
   "private": true,
   "dependencies": {
